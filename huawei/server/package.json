@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "ICT"
+  ],
+  "homepage": "https://github.com/stars569/HuaWeiICT#readme",
+  "bugs": {
+    "url": "https://github.com/stars569/HuaWeiICT/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stars569/HuaWeiICT.git"
+  },
+  "license": "MIT",
+  "author": "stars569",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3"
+  }
+}
