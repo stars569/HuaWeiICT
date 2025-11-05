@@ -13,10 +13,10 @@ export default function Auth({ children }: { children: ReactNode }){
             const localUser = await localStorage.getItem('USER')
             const localToken = await localStorage.getItem('TOKEN')
 
-            if(localUser == null || localUser == undefined)setUser(null)
+            if(localUser == null || localUser === undefined)setUser(null)
             else setUser(JSON.parse(localUser))
 
-            if(localToken == null || localToken == undefined)setToken(null)
+            if(localToken == null || localToken === undefined)setToken(null)
             else setToken(localToken)
         }
         loadInfo()
