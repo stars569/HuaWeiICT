@@ -25,6 +25,12 @@ const db = {
             INSERT INTO users (username, password) VALUES ($1, $2)
         `, [user.username, user.password])
         return res.rows[0]
+    },
+    async getUserByUsername(username){
+        const res = await pool.query(`
+            SELECT * FROM users WHERE username = $1  
+        `, [username])
+        return res.rows[0]
     }
 }
 

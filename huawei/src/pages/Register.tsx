@@ -1,9 +1,10 @@
 import { Form, Input, Button } from 'antd'
-import { basicResponse, data, registerForm } from '../types/authtype'
+import { basicResponse, basicData, registerForm } from '../types/authtype'
 import { registerAPI } from '../apis/user'
 import { Notyf } from 'notyf'
 import { useNavigate } from 'react-router-dom'
 import { AxiosError } from 'axios'
+import errorHandle from '../utils/errorHandle'
 
 export default function Register(){
 
@@ -18,14 +19,7 @@ export default function Register(){
             navi('/login')
         }
         catch(error){
-            const axiosError = error as AxiosError
-            if(!axiosError.response){
-                notify.error('未响应')
-            }
-            else{
-                const response = axiosError.response.data as data
-                notify.error(response.message)
-            }
+            errorHandle(error)
         }
     } 
 
